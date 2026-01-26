@@ -1,4 +1,12 @@
 # Grocofy – Online Grocery Ordering Platform
+![React](https://img.shields.io/badge/Frontend-React-61DAFB?logo=react&logoColor=black)
+![Node.js](https://img.shields.io/badge/Backend-Node.js-339933?logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/Framework-Express.js-000000?logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/Database-MongoDB-47A248?logo=mongodb&logoColor=white)
+![JWT](https://img.shields.io/badge/Auth-JWT-black?logo=jsonwebtokens&logoColor=white)
+![Stripe](https://img.shields.io/badge/Payments-Stripe-635BFF?logo=stripe&logoColor=white)
+![CSS3](https://img.shields.io/badge/Styling-CSS3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/Language-JavaScript-F7DF1E?logo=javascript&logoColor=black)
 
 Grocofy is a full-stack web application designed to simplify online grocery shopping.  
 It allows users to browse products, manage their cart, save personal details and delivery addresses, and place secure online orders.
