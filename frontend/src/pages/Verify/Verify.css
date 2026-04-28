@@ -1,0 +1,172 @@
+.verify {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+}
+
+.verify-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 60px 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.verify-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.verify-content h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.verify-content p {
+  margin: 0;
+  font-size: 15px;
+  color: #6b7280;
+  line-height: 1.6;
+  max-width: 360px;
+}
+
+/* Loading State */
+.verify-content.loading .spinner-icon {
+  color: #059669;
+  animation: spin 1.5s linear infinite;
+}
+
+/* Success State */
+.verify-content.success .success-icon {
+  color: #10b981;
+  animation: scaleIn 0.5s ease;
+}
+
+.verify-content.success h2 {
+  color: #059669;
+}
+
+/* Failed State */
+.verify-content.failed .failed-icon {
+  color: #ef4444;
+  animation: scaleIn 0.5s ease;
+}
+
+.verify-content.failed h2 {
+  color: #dc2626;
+}
+
+/* Error State */
+.verify-content.error .error-icon {
+  color: #f59e0b;
+  animation: scaleIn 0.5s ease;
+}
+
+.verify-content.error h2 {
+  color: #d97706;
+}
+
+/* Animations */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .verify {
+    padding: 30px 16px;
+  }
+
+  .verify-card {
+    padding: 50px 30px;
+  }
+
+  .verify-content h2 {
+    font-size: 22px;
+  }
+
+  .verify-content p {
+    font-size: 14px;
+  }
+
+  .verify-content svg {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .verify {
+    min-height: 60vh;
+    padding: 20px 16px;
+  }
+
+  .verify-card {
+    padding: 40px 24px;
+    border-radius: 12px;
+  }
+
+  .verify-content {
+    gap: 16px;
+  }
+
+  .verify-content h2 {
+    font-size: 20px;
+  }
+
+  .verify-content p {
+    font-size: 13px;
+  }
+
+  .verify-content svg {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.retry-btn {
+  margin-top: 16px;
+  padding: 10px 22px;
+  background: #111827;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.retry-btn:hover {
+  background: #1f2937;
+}

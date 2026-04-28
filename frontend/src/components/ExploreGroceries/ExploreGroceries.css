@@ -1,0 +1,277 @@
+.explore-groceries {
+  padding: 50px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.explore-groceries h1 {
+  color: #333;
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 0 0 10px 0;
+}
+
+.explore-groceries-text {
+  color: #666;
+  font-size: 1rem;
+  margin: 0 0 30px 0;
+}
+
+.explore-groceries-list {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 15px 0 20px;
+  scroll-behavior: smooth;
+}
+
+.explore-groceries-list::-webkit-scrollbar {
+  display: none;
+}
+
+.explore-groceries-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  flex-shrink: 0;
+  min-width: 100px;
+}
+
+.explore-groceries-list-item img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f0f0f0;
+  transition: border 0.2s;
+}
+
+.explore-groceries-list-item img.active {
+  border-color: #10b981;
+  border-width: 4px;
+}
+
+.explore-groceries-list-item p {
+  color: #555;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-align: center;
+  max-width: 110px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.explore-groceries-list-item:has(img.active) p {
+  color: #10b981;
+  font-weight: 600;
+}
+
+/* Large Desktop: 1200px and above */
+@media (min-width: 1200px) {
+  .explore-groceries {
+    padding: 60px 0px 0px 0px;
+  }
+
+  .explore-groceries h1 {
+    font-size: 2.2rem;
+  }
+
+  .explore-groceries-text {
+    font-size: 1.05rem;
+  }
+
+  .explore-groceries-list {
+    gap: 25px;
+  }
+
+  .explore-groceries-list-item {
+    min-width: 120px;
+  }
+
+  .explore-groceries-list-item img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .explore-groceries-list-item p {
+    font-size: 0.95rem;
+    max-width: 120px;
+  }
+}
+
+/* Tablets: 768px to 1024px */
+@media (max-width: 1024px) {
+  .explore-groceries {
+    padding: 45px 15px;
+  }
+
+  .explore-groceries h1 {
+    font-size: 1.8rem;
+  }
+
+  .explore-groceries-list {
+    gap: 18px;
+  }
+
+  .explore-groceries-list-item {
+    min-width: 95px;
+  }
+
+  .explore-groceries-list-item img {
+    width: 95px;
+    height: 95px;
+  }
+
+  .explore-groceries-list-item p {
+    font-size: 0.88rem;
+    max-width: 105px;
+  }
+}
+
+/* Tablets: 768px and below */
+@media (max-width: 768px) {
+  .explore-groceries {
+    padding: 40px 15px;
+  }
+
+  .explore-groceries h1 {
+    font-size: 1.6rem;
+  }
+
+  .explore-groceries-text {
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+  }
+
+  .explore-groceries-list {
+    gap: 15px;
+    padding: 12px 0 18px;
+  }
+
+  .explore-groceries-list-item {
+    min-width: 85px;
+  }
+
+  .explore-groceries-list-item img {
+    width: 85px;
+    height: 85px;
+  }
+
+  .explore-groceries-list-item p {
+    font-size: 0.85rem;
+    max-width: 95px;
+  }
+}
+
+/* Mobile: 500px and below */
+@media (max-width: 500px) {
+  .explore-groceries {
+    padding: 35px 12px;
+  }
+
+  .explore-groceries h1 {
+    font-size: 1.4rem;
+  }
+
+  .explore-groceries-text {
+    font-size: 0.9rem;
+    margin-bottom: 22px;
+  }
+
+  .explore-groceries-list {
+    gap: 12px;
+    padding: 10px 0 15px;
+  }
+
+  .explore-groceries-list-item {
+    min-width: 75px;
+    gap: 10px;
+  }
+
+  .explore-groceries-list-item img {
+    width: 75px;
+    height: 75px;
+    border-width: 2px;
+  }
+
+  .explore-groceries-list-item img.active {
+    border-width: 3px;
+  }
+
+  .explore-groceries-list-item p {
+    font-size: 0.8rem;
+    max-width: 85px;
+  }
+}
+
+/* Extra Small: 380px and below */
+@media (max-width: 380px) {
+  .explore-groceries {
+    padding: 30px 10px;
+  }
+
+  .explore-groceries h1 {
+    font-size: 1.3rem;
+  }
+
+  .explore-groceries-text {
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+  }
+
+  .explore-groceries-list {
+    gap: 10px;
+  }
+
+  .explore-groceries-list-item {
+    min-width: 70px;
+    gap: 8px;
+  }
+
+  .explore-groceries-list-item img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .explore-groceries-list-item p {
+    font-size: 0.75rem;
+    max-width: 80px;
+  }
+}
+
+/* Very Small: 320px and below */
+@media (max-width: 320px) {
+  .explore-groceries {
+    padding: 25px 8px;
+  }
+
+  .explore-groceries h1 {
+    font-size: 1.2rem;
+  }
+
+  .explore-groceries-text {
+    font-size: 0.8rem;
+  }
+
+  .explore-groceries-list {
+    gap: 8px;
+  }
+
+  .explore-groceries-list-item {
+    min-width: 65px;
+  }
+
+  .explore-groceries-list-item img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .explore-groceries-list-item p {
+    font-size: 0.7rem;
+    max-width: 75px;
+  }
+}

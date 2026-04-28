@@ -1,0 +1,253 @@
+/* .list-table-format{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 0.5fr;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    border: 1p solid #cacaca;
+    font-size: 13px;
+}
+
+.list-table-format.title{
+    background-color: #f9f9f9;
+}
+
+.list-table-format img{
+    width: 50px;
+}
+
+@media (max-width:600px) {
+    .list-table-format{
+        grid-template-columns: 1fr 3fr 1fr;
+        gap: 15px;
+    }
+    .list-table-format.title{
+        display: none;
+    }
+    
+} */
+.list.add {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 32px 24px;
+    color: #374151;
+    font-size: 16px;
+}
+
+.list.add > p {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 24px;
+}
+
+.list-table {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+}
+
+.list-table-format {
+    display: grid;
+    grid-template-columns: 80px 2fr 1fr 1fr 80px;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 24px;
+    border-bottom: 1px solid #f3f4f6;
+    font-size: 14px;
+    transition: background 0.15s ease;
+}
+
+.list-table-format:last-child {
+    border-bottom: none;
+}
+
+.list-table-format:not(.title):hover {
+    background: #f9fafb;
+}
+
+.list-table-format.title {
+    background: #f9fafb;
+    font-weight: 600;
+    color: #6b7280;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 14px 24px;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.list-table-format.title b {
+    color: #374151;
+    font-weight: 600;
+}
+
+.list-table-format img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.list-table-format p {
+    margin: 0;
+    color: #374151;
+    font-weight: 500;
+}
+
+.list-table-format p:nth-child(2) {
+    font-weight: 600;
+    color: #111827;
+}
+
+.list-table-format .delete-btn {
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background: #fef2f2;
+    color: #dc2626;
+    border: none;
+    transition: all 0.15s ease;
+    margin: 0 auto;
+}
+
+.list-table-format .delete-btn:hover {
+    background: #dc2626;
+    color: white;
+}
+
+.list-table-format .delete-btn:active {
+    transform: scale(0.95);
+}
+
+.list-table-format .delete-btn svg {
+    display: block;
+}
+
+/* Loading and Empty States */
+.list-loading,
+.list-empty {
+    padding: 60px 24px;
+    text-align: center;
+    color: #9ca3af;
+    font-size: 15px;
+    grid-column: 1 / -1;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .list.add {
+        padding: 24px 20px;
+    }
+
+    .list-table-format {
+        grid-template-columns: 60px 2fr 1fr 1fr 60px;
+        gap: 16px;
+        padding: 14px 20px;
+        font-size: 13px;
+    }
+
+    .list-table-format.title {
+        padding: 12px 20px;
+    }
+
+    .list-table-format img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .list-table-format .delete-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    .list-table-format .delete-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .list.add {
+        padding: 20px 16px;
+        padding-bottom: 100px;
+    }
+
+    .list.add > p {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .list-table-format.title {
+        display: none;
+    }
+
+    .list-table-format:not(.title) {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .list-table-format:not(.title) img {
+        flex-shrink: 0;
+        width: 70px;
+        height: 70px;
+    }
+
+    .list-table-format:not(.title) p:nth-child(2) {
+        flex: 1;
+        font-weight: 600;
+        color: #111827;
+        font-size: 14px;
+    }
+
+    .list-table-format:not(.title) p:nth-child(3),
+    .list-table-format:not(.title) p:nth-child(4) {
+        display: none;
+    }
+
+    .list-table-format:not(.title) .delete-btn {
+        flex-shrink: 0;
+        margin: 0;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 400px) {
+    .list.add > p {
+        font-size: 18px;
+    }
+
+    .list-table-format {
+        padding: 14px;
+        gap: 10px;
+    }
+
+    .list-table-format img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .list-table-format p:nth-child(2) {
+        font-size: 13px;
+    }
+
+    .list-table-format .delete-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    .list-table-format .delete-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+}

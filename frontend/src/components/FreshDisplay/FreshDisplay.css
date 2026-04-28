@@ -1,0 +1,103 @@
+.fresh-display {
+  margin-top: 50px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.fresh-display h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 10px;
+}
+
+.fresh-display-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  margin-top: 30px;
+  gap: 24px;
+  row-gap: 30px;
+}
+
+/* Large Tablets: 1024px and below */
+@media (max-width: 1024px) {
+  .fresh-display {
+    margin-top: 40px;
+    padding: 0 15px;
+  }
+
+  .fresh-display h2 {
+    font-size: 1.8rem;
+  }
+
+  .fresh-display-list {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+    row-gap: 25px;
+  }
+}
+
+/* Tablets: 768px and below */
+@media (max-width: 768px) {
+  .fresh-display {
+    margin-top: 35px;
+  }
+
+  .fresh-display h2 {
+    font-size: 1.6rem;
+  }
+
+  .fresh-display-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    row-gap: 22px;
+  }
+}
+
+/* Mobile: 500px and below */
+@media (max-width: 500px) {
+  .fresh-display {
+    margin-top: 30px;
+    padding: 0 10px;
+  }
+
+  .fresh-display h2 {
+    font-size: 1.4rem;
+  }
+
+  .fresh-display-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    row-gap: 18px;
+    margin-top: 20px;
+  }
+}
+
+/* Extra Small Phones: 380px and below */
+@media (max-width: 380px) {
+  .fresh-display {
+    margin-top: 25px;
+  }
+
+  .fresh-display h2 {
+    font-size: 1.3rem;
+  }
+
+  .fresh-display-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    row-gap: 15px;
+  }
+}
+
+/* Very Small Phones: 320px and below */
+@media (max-width: 320px) {
+  .fresh-display h2 {
+    font-size: 1.2rem;
+  }
+
+  .fresh-display-list {
+    gap: 8px;
+    row-gap: 12px;
+  }
+}
